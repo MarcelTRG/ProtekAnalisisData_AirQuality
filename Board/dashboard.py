@@ -4,7 +4,7 @@ import seaborn as sns
 import streamlit as st
 
 # Title Page
-st.set_page_config(page_title="Air Quality Analysis of differebt stations by Marcel Adila Jufai")
+st.set_page_config(page_title="Air Quality Analysis of Aotizhongxin stations by Marcel Adila Jufai")
 
 # Data Read
 Data_path = 'Data CVS/Aoti.csv'
@@ -22,7 +22,7 @@ st.markdown("""
 - **Dicoding ID**: marceljufai
             
 ### Project Overview
-This dashboard will gives you the result of my analysis of air quality data Aotizhongxu station. This Dashboard will shown the difference of pollutant concentration [NO2, SO2, O3, CO] while also shiwn you the percentage of each pollutant the period of a year
+This dashboard will gives you the result of my analysis of air quality data Aotizhongxu station. This Dashboard will shown the difference of pollutant concentration [NO2, SO2, O3, CO] while also shown you the percentage of each pollutant the period of a year
 """)
 
 # Input Section for User
@@ -54,6 +54,7 @@ st.write(f'The Mean Result of the whole month in {select_year}')
 st.write(Pollutant_level)
 
 #V Visualize the data to a line chart
+st.write('- The graph Result -')
 plt.figure(figsize=(10, 6))
 Pollutant_level.plot(kind='line', marker='o', color='skyblue', linestyle='-')
 plt.title(f'{pollutant_select} Concentration on Aotizhongxu Station in the year {select_year}')
@@ -69,11 +70,14 @@ st.pyplot(plt)
 st.subheader('Pollutant Percentage Throughtout The Year')
 data_column = ['SO2', 'NO2', 'CO', 'O3']
 data_select = Aoti_year[data_column]
+st.write(f'Pollutant data recorded from Aoutizhongxin station in {select_year}')
 st.write(data_select)
 
 sum_values = data_select.sum()
+st.write(f'Mean of the pollutant concentration in {select_year}')
 st.write(sum_values)
 
+st.write('- The graph Result -')
 plt.figure(figsize=(8, 8))
 plt.pie(sum_values, labels=sum_values.index, autopct='%1.1f%%', startangle=140)
 plt.title(f'Distribution of Air Pollutants in {select_year}')
