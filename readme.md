@@ -62,6 +62,8 @@ Since the 'dashnoard.py' and 'requirement.txt need' to be in the same folder so 
 For the IPYNB File that was provided in this submission, i suggest that the teacher or the one that grade this submission to run it in Goofle Collabs, because it much easier there
 
 In the python file "dashboard.py", make sure to change the path for the data read [Line 10] to whereever you save this project in your computer
+
+Python file is in the Board Folder to run the Streamlit. While the original data was on the same folder. The Data that i have been process in in the Data CVS Folder. As said before the requiremnmet.txt was in the Board Folder. But because the tester had problem finding it i copy it outside the folder so it can be found easily
 ---
 
 ## About Me
